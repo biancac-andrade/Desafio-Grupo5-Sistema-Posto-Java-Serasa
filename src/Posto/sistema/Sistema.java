@@ -1,33 +1,35 @@
 package Posto.sistema;
 
-import Posto.pagamento.Pagamento;
 import Posto.servicos.Abastecimento;
 
 import java.util.Scanner;
 
-
+// Bianca Cristina reajusta classe Sistema 
 public class Sistema {
     public static void main(String[] args){
         Scanner entrada = new Scanner(System.in);
 
         int escolhaCliente;
-        int tipoCombustivel = 0;
-        double valorAbastecer;
-        double qtdCombustivel;
 
-        System.out.println("ola seja bem vindo(a) ao posto transforme se");
-        System.out.println("Qual servico deseja fazer? 1-Abastecer");
+        System.out.println(" olá, Seja Bem Vinda(o) ao  posto de gasolina Transforme se");
+        System.out.println("Hoje temos seguintes serviços: ");
+        System.out.println("[1] - Abastecimento ");
+        System.out.println("[2] -Lavagem");
+        System.out.println("[3] - Troca de óleo");
+        System.out.println(" Digite qual numero da sua opção: ");
         escolhaCliente = entrada.nextInt();
+        
+        if (escolhaCliente == 1) {
+          Abastecimento.Abastecer();
+        } else if (escolhaCliente == 2) {
+        
+        } else if (escolhaCliente == 3) {
+        
+        } else {
 
-        System.out.println("Quanto gostaria de abastecer?");
-        valorAbastecer = entrada.nextDouble();
-        Abastecimento.Abastecer(tipoCombustivel, valorAbastecer);
-        System.out.println("Qual seria a forma de pagamento? 1-Dinheiro 2-Debito 3-Credito");
-        int formaPagamento  = entrada.nextInt();
-
-        Pagamento.formaPagamento(formaPagamento, valorAbastecer);
-
+        System.out.println("Essa opção não existe.");
+      }
+      
         entrada.close();
-
     }
 }
