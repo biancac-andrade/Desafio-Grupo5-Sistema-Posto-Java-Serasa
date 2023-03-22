@@ -1,33 +1,42 @@
 package Posto.pagamento;
 
 import java.util.Scanner;
-
+// Bianca Cristina reajusta classe Pagamento 
 public class Pagamento {
-    public static double formaPagamento(int formaEscolhida, double valorAbastecido){
-        Scanner entrada = new Scanner(System.in);
+  public static double formaPagamento(String[] args) {
+    int opcaoPagamento;
 
-        switch (formaEscolhida){
-        case 1:
-            System.out.println("Sera pago no dinheiro");
+      Scanner entrada = new Scanner(System.in);
 
-            System.out.println("Qual será a quantia paga?");
-            double quantiaEmDinheiro = entrada.nextDouble();
-            // if(quantiaEmDinheiro == valorAbastecido){
-            //  System.out.println("Obrigado, tenha um bom dia");
-            //   }else if(quantiaEmDinheiro > valorAbastecido){
-            //   double troco = quantiaEmDinheiro - valorAbastecido;
-            //    System.out.println("Obrigado, seu troco é : " + troco);
-            //   }else if(quantiaEmDinheiro < valorAbastecido){
-            //      System.out.println("Obrigado, nao vai rolar fiado não");
-            //  }
+      System.out.println("Qual a forma de pagamento?");
+      System.out.println("[1] - Pix ");
+      System.out.println("[2] - Cartão de Débito ");
+      System.out.println("[3] - Certão de Crédito");
+      System.out.println("[4] - Dinheiro");
+      System.out.println("Digite qual numero da sua opção: ");
+      opcaoPagamento = entrada.nextInt();
 
-            PagamentoDinheiro.pagamentoEmDinheiro(quantiaEmDinheiro,valorAbastecido);
+      
+        switch (opcaoPagamento){
+          case 1:
+          PagamentoPix.pagamentoEmPix(null);
             break;
+          case 2:
+            System.out.println("Ok pagamento feito");
+            break;
+          case 3:
+            System.out.println("Ok pagamento feito");
+
+            break;
+          case 4:
+            PagamentoDinheiro.pagamentoEmDinheiro(args);
+            break;
+            
 
         default:
-            System.out.println("Sera pago no dinheiro");
+            System.out.println("Desculpa, não existe essa opção! ");
             break;
         }
-        return valorAbastecido;
+        return opcaoPagamento;
     }
 }
