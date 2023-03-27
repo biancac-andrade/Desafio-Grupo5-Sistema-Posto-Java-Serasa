@@ -1,18 +1,24 @@
-## Getting Started
+# Projeto Sistema de Posto de Gasolina
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+## Desafio da semana de dia 20 a 24 de Março 
 
-## Folder Structure
+### Proposto por professor Gabriel Nunes da aula de Java de bootcamp Transforme - se da Serasa com parceria de Wise Hands
 
-The workspace contains two folders by default, where:
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+## Grupo 05
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+- Bianca Cristina De Andrade
+- João Paulo Da Silva Garcia
+- Richard Gomes Teixeira
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
 
-## Dependency Management
+## Em continuação do código feito pelo professor
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+### Organização de tarega combinada pelo grupo é:
+
+- Classe para Sistema de Abastecimento  -> Bianca
+- Classe Sistema de Troca de Oleo  -> Richard
+- Classe Sistema de Lavagem de veiculos -> João
+
+- Melhorias em classe Pagamentos -> Todos 
+- Melhorias em classe Sistema -> Todos
