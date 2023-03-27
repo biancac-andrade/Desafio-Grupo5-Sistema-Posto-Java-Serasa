@@ -1,10 +1,12 @@
 package Posto.sistema;
 
 import Posto.servicos.Abastecimento;
+import Posto.servicos.TrocaOleo;
 
 import java.util.Scanner;
 
 // Bianca Cristina reajusta classe Sistema 
+// Richard Gomes Teixeira adiciona o serviço de troca de óleo na opção 3
 public class Sistema {
     public static void main(String[] args){
         Scanner entrada = new Scanner(System.in);
@@ -24,7 +26,7 @@ public class Sistema {
         } else if (escolhaCliente == 2) {
         
         } else if (escolhaCliente == 3) {
-        
+        TrocaOleo.servicoTrocaOleo();
         } else {
 
         System.out.println("Essa opção não existe.");
