@@ -1,13 +1,13 @@
 package Posto.pagamento;
 
 import java.util.Scanner;
-// Bianca Cristina reajusta classe Pagamento 
+// Bianca e Rick reajusta classe Pagamento 
 public class Pagamento {
-  public static double formaPagamento(String[] args) {
+  public static void formaPagamento(double valorServico) {
     int opcaoPagamento;
 
       Scanner entrada = new Scanner(System.in);
-
+do{
       System.out.println("Qual a forma de pagamento?");
       System.out.println("[1] - Pix ");
       System.out.println("[2] - Cartão de Débito ");
@@ -19,17 +19,17 @@ public class Pagamento {
       
         switch (opcaoPagamento){
           case 1:
-          PagamentoPix.pagamentoEmPix(null);
+          PagamentoPix.pix(valorServico);
             break;
           case 2:
-            System.out.println("Ok pagamento feito");
+          PagamentoDebito.debito(valorServico);
             break;
           case 3:
-            System.out.println("Ok pagamento feito");
+            PagamentoCredito.credito(valorServico);
 
             break;
           case 4:
-            PagamentoDinheiro.pagamentoEmDinheiro(args);
+            PagamentoDinheiro.dinheiro(valorServico);
             break;
             
 
@@ -37,6 +37,9 @@ public class Pagamento {
             System.out.println("Desculpa, não existe essa opção! ");
             break;
         }
-        return opcaoPagamento;
+} while (opcaoPagamento != 1 && opcaoPagamento != 2 && opcaoPagamento != 3 && opcaoPagamento != 4);
+		System.out.println("Obrigado por escolher nossos serviços. Volte sempre!");
+		
+		entrada.close();
     }
 }
