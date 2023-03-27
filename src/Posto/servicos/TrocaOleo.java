@@ -44,8 +44,8 @@ public class TrocaOleo {
 		
 		System.out.println("Qual seria a forma de pagamento?");
 
-		Pagamento.formaPagamento(null);
+		Pagamento.formaPagamento(valorTotalTrocaOleo);
 		
 		entrada.close();
-	  }
+	}
 	}
